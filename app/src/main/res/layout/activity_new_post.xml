@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".NewPostActivity">
+
+    <ImageView
+        android:id="@+id/New_Post_Image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/add_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_upload_image"
+        tools:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/New_Post_PetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/New_Post_Image"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Pet Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/New_Post_Breed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/New_Post_PetName"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Breed"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text=""
+        tools:ignore="TextContrastCheck" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/New_Post_Location"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <EditText
+            android:id="@+id/New_Post_Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textLongMessage|textMultiLine"
+            android:maxHeight="100dp"
+            android:minHeight="48dp"
+            android:text=""
+            android:textAlignment="textStart" />
+    </ScrollView>
+    <!--suppress AndroidUnresolvableTag -->
+
+    <EditText
+        android:id="@+id/New_Post_Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/New_Post_Breed"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:text=""
+        android:textAlignment="textStart" />
+
+    <Button
+        android:id="@+id/Create_New_Post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ScrollView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="16dp"
+        android:text="create new post" />
+
+
+</RelativeLayout>
